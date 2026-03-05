@@ -1,0 +1,204 @@
+/* Fonts & Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #f4a261;
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e76f51;
+}
+
+/* Header & Navigation */
+header {
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+    color: white;
+    height: 100vh;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0,0,0,0.5);
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f4a261;
+}
+
+/* Hero Section */
+.hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Menu Section */
+#menu {
+    padding: 60px 20px;
+    background-color: #fff8f0;
+    text-align: center;
+}
+
+#menu h2 {
+    margin-bottom: 40px;
+    color: #264653;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.menu-category {
+    flex: 1 1 300px;
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.item {
+    background-color: #fff3e0;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Reservation */
+#reservation {
+    padding: 60px 20px;
+    background-color: #2a9d8f;
+    color: white;
+    text-align: center;
+}
+
+#reservation input {
+    display: block;
+    margin: 15px auto;
+    padding: 12px;
+    width: 250px;
+    border-radius: 5px;
+    border: none;
+}
+
+#reservation button {
+    margin-top: 10px;
+}
+
+/* Reviews */
+#reviews {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f4a261;
+    color: white;
+}
+
+#reviews button {
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #264653;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+}
+
+/* Responsive */
+@media(max-width: 768px){
+    nav ul {
+        flex-direction: column;
+        background: rgba(0,0,0,0.7);
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        display: none;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    .menu-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+}
